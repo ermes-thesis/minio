@@ -95,13 +95,15 @@ For application developers, see <https://docs.min.io/enterprise/aistor-object-st
 
 ## Build Docker Image
 
+**NB: As of October 2026 the original dockerfile has stopped working due to the public image being removed from the Docker repository. The updated file follows the instructions from [this blog](https://jacar.es/en/fix-pull-access-denied-minio-docker/).**
+
 You can use the `docker build .` command to build a Docker image on your local host machine.
 You must first [build MinIO](#install-from-source) and ensure the `minio` binary exists in the project root.
 
 The following command builds the Docker image using the default `Dockerfile` in the root project directory with the repository and image tag `myminio:minio`
 
 ```sh
-docker build -t myminio:minio .
+docker build -t minio-local:legacy .
 ```
 
 Use `docker image ls` to confirm the image exists in your local repository.
